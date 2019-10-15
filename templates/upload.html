@@ -1,33 +1,14 @@
 <html>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css')}}">
-    <style>
-    .content {
-        left: 50%;
-        top: 50%;
-        margin-left: 37.5%;
-        margin-top: 7%;
-    }
-    .form{
-        left: 5%;
-        top: 5%;
-        margin-left: 40%;
-        margin-top: 2%;
-    }
-    .form2{
-        left: 5%;
-        top: 5%;
-        margin-left: 42.5%;
-        margin-top: 2%;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
     <h4 class="form">Svm classify day or night</h4>
     <h6 class="form2">Puts the image to classify</h6>
-   <body>
+    <body>
         <div class="content">
             <form action = "http://192.168.250.151:5000/predict" method="POST" enctype="multipart/form-data">
                 <input type="file" name="file"/>
-                <input type="submit"/>
+                <input type="submit" value="Submit"/>
             </form>
         </div>
-   </body>
+    </body>
 </html>
